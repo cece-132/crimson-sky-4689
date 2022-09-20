@@ -6,7 +6,7 @@
   <h4> Ingredients </h4>
   <div class="dish-ingredients">
     <% @dish.ingredients.each do |ing| %>
-      <%= link_to ing.name, ingredient_path %>
+      <%= link_to ing.name, chef_ingredient_path(@dish.chef, ing) %>
     <% end %>
   </div>
 <br>  Calorie Count: <%= @dish.calorie_count %>

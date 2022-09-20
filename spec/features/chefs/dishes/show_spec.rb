@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Dish do
-  describe 'User Story 1' do
+  describe 'User Story 1 and 2' do
     
     describe 'show page presents a dish attributes' do
       it 'show page presents dishes name and description' do
