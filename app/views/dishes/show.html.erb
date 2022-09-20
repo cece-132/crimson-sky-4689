@@ -1,0 +1,14 @@
+<div class="dish">
+  <h2> <%= @dish.name.titleize %> </h2>
+
+  <p> <%= @dish.description %> </p>
+
+  <h4> Ingredients </h4>
+  <div class="dish-ingredients">
+    <% @dish.ingredients.each do |ing| %>
+      <%= link_to ing.name, ingredient_path %>
+    <% end %>
+  </div>
+
+  Dish Belongs to: <%= @dish.chef.name %>
+</div>

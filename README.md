@@ -55,6 +55,7 @@ When I visit a dish's show page
 I see the dish’s name and description
 And I see a list of ingredients for that dish
 And I see the chef's name.
+- finished at 3:37
 ```
  
 Story 2 of 3
