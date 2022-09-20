@@ -1,0 +1,9 @@
+<h2> <%= @chef.name %> Ingredients </h2>
+
+<div class="ingredients">
+  <% @ingredients.each do |ing| %>
+    <div id="ing-<%=ing.id%>">
+      <%= ing.name %> <br>
+    </div>
+  <% end %>
+</div>
