@@ -21,6 +21,7 @@ RSpec.describe Dish do
               expect(ing.name).to appear_before(ing2.name)
               expect(ing2.name).to_not appear_before(ing.name)
             end
+          expect(page).to have_content("Calorie Count: #{ing.calories + ing2.calories}")
           expect(page).to have_content("#{chef.name}")
         end
 
