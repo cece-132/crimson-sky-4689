@@ -10,9 +10,9 @@ RSpec.describe Dish do
         ing = Ingredient.create!(name: "Ingredient 1", calories: 67)
         ing2 = Ingredient.create!(name: "Ingredient 2", calories: 86)
         ing2 = Ingredient.create!(name: "Ingredient 3", calories: 92)
-        recipe = Recipe.create!(dish_id: dish.id, ingredient_id: ing.id)
-        recipe = Recipe.create!(dish_id: dish.id, ingredient_id: ing2.id)
-        recipe = Recipe.create!(dish_id: dish2.id, ingredient_id: ing2.id)
+        recipe2 = Recipe.create!(dish_id: dish.id, ingredient_id: ing.id)
+        recipe3 = Recipe.create!(dish_id: dish.id, ingredient_id: ing2.id)
+        recipe4 = Recipe.create!(dish_id: dish2.id, ingredient_id: ing2.id)
 
         visit chef_ingredients_path(chef)
 
@@ -21,7 +21,7 @@ RSpec.describe Dish do
             expect(page).to have_content("#{ing2.name}")
           end
         end
-        
+
       end
     end
   end

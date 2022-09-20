@@ -3,3 +3,15 @@
 <br>
 <br>
 <%= link_to "View My Ingredients", chef_ingredients_path(@chef) %>
+
+<br>
+<br>
+<br>
+<h4> Top 3 Ingredients </h4>
+  <div id="top_3_ing">
+<ol>
+    <% @chef.top_3_ingredients.each do |ing| %>
+      <li> <%= ing.name %> </li>
+    <% end %>
+</ol>
+  </div>

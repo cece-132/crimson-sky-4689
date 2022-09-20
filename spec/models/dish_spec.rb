@@ -19,8 +19,8 @@ RSpec.describe Dish, type: :model do
         dish = Dish.create!(name: "Dish 1", description: "Description of food", chef_id: chef.id)
         ing = Ingredient.create!(name: "Ingredient 1", calories: 67)
         ing2 = Ingredient.create!(name: "Ingredient 2", calories: 86)
-        recipe = Recipe.create!(dish_id: dish.id, ingredient_id: ing.id)
-        recipe = Recipe.create!(dish_id: dish.id, ingredient_id: ing2.id)
+        recipe1 = Recipe.create!(dish_id: dish.id, ingredient_id: ing.id)
+        recipe2 = Recipe.create!(dish_id: dish.id, ingredient_id: ing2.id)
 
         expect(dish.calorie_count).to eq 153
       end
